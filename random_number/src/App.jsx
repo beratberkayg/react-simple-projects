@@ -7,18 +7,15 @@ function App() {
       <div className="container">
         <div className="title">
           <h2>Random Number</h2>
-          <p>Generate a random number between 1 and 100</p>
+          <p>Generate a random number between 1 and 100...</p>
         </div>
         <div className="randomNum">
           <p>Random Number : {}</p>
         </div>
         <div className="inputContainer">
-          <div className="inputBox">
-            <input type="number" placeholder="Minimum" />
-          </div>
-          <div className="inputBox">
-            <input type="number" placeholder="Maximum" />
-          </div>
+          <input type="number" aria-valuemin={0} placeholder="Minimum Value" />
+
+          <input type="number" placeholder="Maximum Value" />
         </div>
         <button>Get Random Number</button>
       </div>

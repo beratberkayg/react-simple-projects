@@ -1,17 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
 import "./app.css";
 
-const [minVal, setMinVal] = useState("0");
-
-const [maxVal, setMaxVal] = useState("10");
-
-const [randomNum, setRandomNum] = useState("5");
-
-const giveRandomNum = () => {
-  setRandomNum(Math.floor(Math.random() * (maxVal - minVal + 1) + minVal));
-};
-
 function App() {
+  const [minVal, setMinVal] = useState(0);
+
+  const [maxVal, setMaxVal] = useState(10);
+
+  const [randomNum, setRandomNum] = useState(5);
+
+  const giveRandomNum = () => {
+    setRandomNum(Math.floor(Math.random() * (maxVal - minVal + 1) + minVal));
+  };
   return (
     <div className="hero">
       <div className="container">
@@ -29,14 +29,14 @@ function App() {
             type="number"
             placeholder="Minimum Value"
             value={minVal}
-            onChange={(e) => setMinVal(e.target.value)}
+            onChange={(e) => setMinVal(+e.target.value)}
           />
 
           <input
             type="number"
             placeholder="Maximum Value"
             value={maxVal}
-            onChange={(e) => setMaxVal(e.target.value)}
+            onChange={(e) => setMaxVal(+e.target.value)}
           />
         </div>
         <button onClick={giveRandomNum}>Get Random Number</button>

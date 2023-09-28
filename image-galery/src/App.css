@@ -29,14 +29,21 @@
 }
 
 .selected img {
-  object-fit: cover;
+  border-radius: 20px;
 }
 
 .imgContainer {
   width: 90%;
-  height: 100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  border: 1px solid red;
   align-items: center;
+}
+
+.imgContainer img {
+  width: 100px;
+  height: 100px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 20px;
 }

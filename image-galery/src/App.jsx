@@ -13,7 +13,9 @@ function App() {
           <img src="" alt="" />
         </div>
         <div className="imgContainer">
-          <img src="" alt="" />
+          {Image.map((img, index) => (
+            <img key={index} src={img} />
+          ))}
         </div>
       </div>
     </div>

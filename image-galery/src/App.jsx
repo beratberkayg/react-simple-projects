@@ -3,7 +3,21 @@ import Image from "./Image";
 import "./App.css";
 
 function App() {
-  return <></>;
+  return (
+    <div className="hero">
+      <div className="container">
+        <div className="title">
+          <h1>React Image Gallery</h1>
+        </div>
+        <div className="selected">
+          <img src="" alt="" />
+        </div>
+        <div className="imgContainer">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;

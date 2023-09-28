@@ -1,1 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.hero {
+  height: 100vh;
+  background: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border: 1px solid red;
+  min-width: 640px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.selected {
+  width: 80%;
+  border: 1px solid red;
+  height: 300px;
+}
+
+.selected img {
+  object-fit: cover;
+}
+
+.imgContainer {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
+  align-items: center;
+}

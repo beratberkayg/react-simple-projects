@@ -17,8 +17,6 @@ function App() {
     };
     setTodos((oldTodos) => [...oldTodos, todo]);
     setNewTodo("");
-    console.log(newTodo);
-    console.log(todos);
   }
 
   function removeTodo(id) {

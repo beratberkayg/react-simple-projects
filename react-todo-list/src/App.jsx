@@ -7,6 +7,10 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   function addTodo() {
+    if (!newTodo) {
+      return alert("please add todo");
+    }
+
     const todo = {
       id: Math.floor(Math.random() * 1000),
       value: newTodo,
@@ -15,6 +19,11 @@ function App() {
     setNewTodo("");
     console.log(newTodo);
     console.log(todos);
+  }
+
+  function removeTodo(id) {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
   }
 
   return (
@@ -32,12 +41,18 @@ function App() {
         </button>
         <ul>
           {todos.map((todo) => {
-            return <li key={todo.id}>{todo.value}</li>;
+            return (
+              <li key={todo.id}>
+                {todo.value}{" "}
+                <button onClick={() => removeTodo(todo.id)}>Delete</button>
+              </li>
+            );
           })}
         </ul>
       </div>
     </div>
   );
+  s;
 }
 
 export default App;

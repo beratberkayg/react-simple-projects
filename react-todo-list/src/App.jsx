@@ -6,7 +6,16 @@ function App() {
   const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useState([]);
 
-  function addTodo() {}
+  function addTodo() {
+    const todo = {
+      id: Math.floor(Math.random() * 1000),
+      value: newTodo,
+    };
+    setTodos((oldTodos) => [...oldTodos, todo]);
+    setNewTodo("");
+    console.log(newTodo);
+    console.log(todos);
+  }
 
   return (
     <div className="hero">
@@ -18,9 +27,14 @@ function App() {
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
         />
-        <button type="submit" onClick={addTodo()}>
+        <button type="submit" onClick={addTodo}>
           Add To Do
         </button>
+        <ul>
+          {todos.map((todo) => {
+            return <li key={todo.id}>{todo.value}</li>;
+          })}
+        </ul>
       </div>
     </div>
   );

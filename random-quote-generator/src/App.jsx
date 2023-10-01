@@ -13,11 +13,17 @@ function App() {
       });
   };
 
+  useEffect(() => {
+    getQuote();
+  }, []);
+
   return (
     <div className="App">
-      {quotes.text}
-      {quotes.author}
-      <button onClick={getQuote}>Random Quotes</button>
+      <div className="quote">
+        <p>{quotes.text}</p>
+        <p>{quotes.author}</p>
+      </div>
+      <button onClick={getQuote}>Get Quotes</button>
     </div>
   );
 }

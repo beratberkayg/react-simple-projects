@@ -1,0 +1,19 @@
+.card {
+  width: 250px;
+  height: 500px;
+  background: rgba(11, 106, 194, 0.7);
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card img {
+  height: 200px;
+  width: 250px;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin-top: 30px;
+  letter-spacing: 1px;
+}

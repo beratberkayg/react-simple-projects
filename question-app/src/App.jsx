@@ -32,14 +32,14 @@ function App() {
         {showResult ? (
           <div className="card-result">
             <h1>SONUÇ</h1>
-            <h2>Puan : {score} </h2>
+            <h1>Puan : {score} </h1>
           </div>
         ) : (
           <div className="card-question">
             <h2>
               Soru {currentQuestion + 1} / {Data.length}
             </h2>
-            <h3>{Data[currentQuestion].text}</h3>
+            <h2>{Data[currentQuestion].text}</h2>
             {Data[currentQuestion].options.map((option) => {
               return (
                 <li

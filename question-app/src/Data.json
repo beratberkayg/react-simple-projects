@@ -1,0 +1,42 @@
+[
+  {
+    "text": "Doğum Günüm Ne Zaman?",
+    "options": [
+      { "id": 0, "text": "15 NİSAN", "isCorrect": false },
+      { "id": 1, "text": "15 MART", "isCorrect": true },
+      { "id": 2, "text": "25 NİSAN", "isCorrect": false }
+    ]
+  },
+  {
+    "text": "EN SEVDİĞİM RENK?",
+    "options": [
+      { "id": 0, "text": "MOR", "isCorrect": true },
+      { "id": 1, "text": "MAVİ", "isCorrect": false },
+      { "id": 2, "text": "SİYAH", "isCorrect": false }
+    ]
+  },
+  {
+    "text": "EN SEVDİĞİM HAYVAN?",
+    "options": [
+      { "id": 0, "text": "AT", "isCorrect": false },
+      { "id": 1, "text": "MAYMUN", "isCorrect": true },
+      { "id": 2, "text": "HİPOPOTAM", "isCorrect": false }
+    ]
+  },
+  {
+    "text": "EN SEVDİĞİM FİLM?",
+    "options": [
+      { "id": 0, "text": "KURU OTLAR ÜSTÜNDE", "isCorrect": false },
+      { "id": 1, "text": "THE TRUMAN SHOW", "isCorrect": true },
+      { "id": 2, "text": "ZİNDAN ADASI", "isCorrect": false }
+    ]
+  },
+  {
+    "text": "BENİ TANIMLAYAN CÜMLE?",
+    "options": [
+      { "id": 0, "text": "HALLEDERİZ", "isCorrect": false },
+      { "id": 1, "text": "BEN KALİTEYİM", "isCorrect": true },
+      { "id": 2, "text": "SENİN HAVAN YETER", "isCorrect": false }
+    ]
+  }
+]

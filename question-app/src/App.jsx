@@ -7,6 +7,17 @@ function App() {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
+  const optionClicked = (isCorrect) => {
+    if (isCorrect) {
+      setScore(score + 1);
+    }
+    if (currentQuestion + 1 < Data.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setShowResult(true);
+    }
+  };
+
   return (
     <div className="App">
       <div className="card">
@@ -16,12 +27,12 @@ function App() {
             Bu test beni ne kadar tanıdığını ölçmek için yapılmıştır. Test
             sonunda almış olduğun puanı lütfen bana geri bildirimde bulun.
           </p>
-          <h2>Puan : {score} </h2>
         </div>
 
         {showResult ? (
           <div className="card-result">
-            <h1>result</h1>
+            <h1>SONUÇ</h1>
+            <h2>Puan : {score} </h2>
           </div>
         ) : (
           <div className="card-question">

@@ -10,7 +10,7 @@ function App() {
     setHex(randomColor);
   }
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: hex }}>
       <h1>{hex}</h1>
       <button onClick={randomHex}>Click For New Background Color</button>
       <button onClick={() => navigator.clipboard.writeText(hex)}>

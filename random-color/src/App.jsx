@@ -11,8 +11,8 @@ function App() {
   }
   return <div className="App">
     <h1>{hex}</h1>
-    <button>Click For New Background Color</button>
-    <button>Copy The Hex Value</button>
+    <button onClick={randomHex}>Click For New Background Color</button>
+    <button onClick={()=> navigator.clipboard.writeText(hex)}>Copy The Hex Value</button>
   </div>;
 }
 

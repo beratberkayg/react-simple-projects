@@ -1,11 +1,11 @@
 import React from "react";
 
-function Accordion() {
+function Accordion(props) {
   return (
     <div className="accordion">
       <div className="accordionHeading">
         <div className="container">
-          <p>Question</p>
+          <p>Question {props.title} </p>
           <span>Clik Me</span>
         </div>
       </div>

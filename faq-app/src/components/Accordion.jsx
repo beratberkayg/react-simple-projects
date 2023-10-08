@@ -6,10 +6,10 @@ function Accordion({ title, active, setActive }) {
       <div className="accordionHeading">
         <div className="container">
           <p>Question {title} </p>
-          <span>Clik Me</span>
+          <span onClick={() => setActive(title)}>Clik Me</span>
         </div>
       </div>
-      <div className="accordionContent">
+      <div className={(active === title ? "show" : "") + "accordionContent"}>
         <div className="container">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ex

@@ -36,3 +36,17 @@ img {
   background: black;
   color: white;
 }
+
+.Detail {
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 40px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-size: 1.5em;
+}

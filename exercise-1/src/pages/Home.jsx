@@ -1,6 +1,6 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Data = [
+export const Data = [
   {
     id: 1,
     name: "Berat Berkay",
@@ -22,11 +22,16 @@ const Data = [
 ];
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <div className="Home">
       {Data.map((dt, i) => {
         return (
-          <div className="card" key={i}>
+          <div
+            onClick={() => navigate(`detail/${dt.id}`)}
+            className="card"
+            key={i}
+          >
             <img src={dt.img} />
             <h2>{dt.name}</h2>
             <h3>{dt.surname}</h3>

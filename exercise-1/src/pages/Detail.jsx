@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Home, { Data } from "./Home";
+import { Data } from "./Home";
 
 function Detail() {
   const { id } = useParams();

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 function Detail() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [singleData, setSingleData] = useState();
 
@@ -16,7 +17,17 @@ function Detail() {
     getData();
   }, [id]);
 
-  return <div>Detail</div>;
+  return (
+    <div>
+      <div className="card">
+        <p>{singleData?.title}</p>
+        <img src={singleData?.image} alt="" />
+        <p>Price : {singleData?.price} $</p>
+        <p>{singleData?.description}</p>
+        <button onClick={() => navigate("/")}>Go Home Page</button>
+      </div>
+    </div>
+  );
 }
 
 export default Detail;

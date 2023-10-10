@@ -20,10 +20,10 @@ function Home() {
   console.log(allData);
 
   return loading ? (
-    <div>loading...</div>
+    <div id="loading">loading...</div>
   ) : (
     <div className="Home">
-      {allData.map((dt, index) => {
+      {allData?.map((dt, index) => {
         return (
           <div
             onClick={() => navigate(`detail/${dt.id}`)}
@@ -34,7 +34,6 @@ function Home() {
             <img src={dt.image} alt="" />
             <p>Price : {dt.price} $</p>
             <p>{dt.description}</p>
-            <p>{}</p>
           </div>
         );
       })}

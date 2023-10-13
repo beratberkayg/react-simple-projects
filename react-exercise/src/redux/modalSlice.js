@@ -1,20 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  data: [],
+  modal: false,
 };
 
-export const dataSlice = createSlice({
-  name: "data",
+export const modalSlice = createSlice({
+  name: "modal",
   initialState,
   reducers: {
-    modal: (state, action) => {
+    incrementByAmount: (state, action) => {
       state.value += action.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {} = dataSlice.actions;
+export const {} = modalSlice.actions;
 
-export default dataSlice.reducer;
+export default modalSlice.reducer;

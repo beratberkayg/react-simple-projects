@@ -1,7 +1,10 @@
 import React from "react";
 import { MdPostAdd } from "react-icons/md";
+import { useDispatch } from "react-redux";
 
 function Header() {
+  const dispatch = useDispatch();
+
   return (
     <div className="flex items-center justify-between bg-indigo-600 text-white px-4 py-3">
       <div className="text-3xl">React Uygulama</div>
@@ -19,7 +22,10 @@ function Header() {
             placeholder="Arama yapınız..."
           />
         </div>
-        <div className="bg-indigo-800 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer">
+        <div
+          onClick={() => dispatch()}
+          className="bg-indigo-800 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+        >
           <MdPostAdd size={24} />
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { MdPostAdd } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { modalFunch } from "../redux/modalSlice";
+import { modalFunc } from "../redux/modalSlice";
 
 function Header() {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ function Header() {
           />
         </div>
         <div
-          onClick={() => dispatch(modalFunch())}
+          onClick={() => dispatch(modalFunc())}
           className="bg-indigo-800 w-10 h-10 rounded-full flex items-center
           justify-center cursor-pointer"
         >

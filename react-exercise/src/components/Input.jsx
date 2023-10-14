@@ -1,14 +1,15 @@
-import { placeholder } from "@babel/types";
 import React from "react";
 
-function Input({ type, id, onChange, placeholder }) {
+function Input({ value, type, id, onChange, placeholder, name }) {
   return (
     <input
-      className="h-10 w-full border rounded-md p-2"
+      value={value}
+      className="h-10 w-full border rounded-md p-2 outline-none mt-3 "
       type={type}
       id={id}
       onChange={onChange}
       placeholder={placeholder}
+      name={name}
     />
   );
 }

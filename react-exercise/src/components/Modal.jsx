@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import { GrClose } from "react-icons/gr";
 import Input from "./Input";
 
-function Modal({ title, concent, btnText, btnFunc }) {
+const Modal = ({ title, concent, btnText, btnFunc }) => {
   const [productInfo, setProductInfo] = useState({
     name: "",
     price: "",
     url: "",
   });
-  const onChangeFunc = (e, type) => {
-    if (type == "url") {
-    } else {
-      setProductInfo(prev => ({...prev : [e.target.name] : [e.target.value]})
-    }
-  };
+
   return (
     <div className="fixed top-0 left-0 bottom-0 right-0 w-full h-screen flex items-center justify-center">
       <div className="w-1/3 bg-white shadow-lg rounded-md p-4">
@@ -45,6 +40,6 @@ function Modal({ title, concent, btnText, btnFunc }) {
       </div>
     </div>
   );
-}
+};
 
 export default Modal;

@@ -30,7 +30,7 @@ function Product() {
   };
 
   const buttonFunc = () => {
-    dispatch(createDataFunc());
+    dispatch(createDataFunc(productInfo));
     dispatch(modalFunc());
   };
 
@@ -63,7 +63,12 @@ function Product() {
 
   return (
     <div>
-      <ProductCard />
+      <div>
+        {data?.map((dt, i) => (
+          <ProductCard key={i} dt={dt} />
+        ))}
+      </div>
+
       {modal && <Modal content={contentModal} title={"Ürün Oluştur"} />}
     </div>
   );

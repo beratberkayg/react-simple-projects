@@ -4,15 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 import Modal from "../components/Modal";
 import Input from "../components/Input";
 import Button from "../components/Button";
-import { createDataFunc } from "../redux/dataSlice";
+import { createDataFunc, updateDataFunc } from "../redux/dataSlice";
 import { modalFunc } from "../redux/modalSlice";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Product() {
   const { modal } = useSelector((state) => state.modal);
   const { data } = useSelector((state) => state.data);
   const location = useLocation();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [productInfo, setProductInfo] = useState({
     name: "",
@@ -31,7 +32,7 @@ function Product() {
     }
   };
 
-  let loc = location?.search.split("m")[1];
+  let loc = location?.search.split("=")[1];
 
   useEffect(() => {
     if (loc) {
@@ -39,11 +40,17 @@ function Product() {
     }
   }, [loc]);
 
-  console.log(location?.search.split("m")[1], "data");
+  console.log(location?.search.split("=")[1], "data");
 
   const buttonFunc = () => {
     dispatch(createDataFunc({ ...productInfo, id: data.length + 1 }));
     dispatch(modalFunc());
+  };
+
+  const buttonUpdateFunc = () => {
+    dispatch(updateDataFunc({ ...productInfo, id: loc }));
+    dispatch(modalFunc());
+    navigate(`/`);
   };
 
   const contentModal = (
@@ -73,7 +80,7 @@ function Product() {
       />
       <Button
         btnText={loc ? "Ürün Güncelle" : "Ürün Oluştur"}
-        onClick={buttonFunc}
+        onClick={loc ? buttonUpdateFunc : buttonFunc}
       />
     </>
   );

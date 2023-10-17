@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   data: [],
+  keyword: "",
 };
 
 export const dataSlice = createSlice({
@@ -22,6 +23,9 @@ export const dataSlice = createSlice({
         ),
       ];
     },
+    searchDataFunc: (state, action) => {
+      state.keyword = action.payload;
+    },
     deleteDataFunc: (state, action) => {
       state.data = [...state.data.filter((dt) => dt.id != action.payload)];
     },
@@ -41,6 +45,7 @@ export const {
   deleteDataFunc,
   updateDataFunc,
   sortingDataFunc,
+  searchDataFunc,
 } = dataSlice.actions;
 
 export default dataSlice.reducer;

@@ -23,7 +23,7 @@ const App: React.FC = () => {
   return (
     <>
       <Input addMessage={addMessage} todo={todo} setTodo={setTodo} />
-      <Message todos={todos} />
+      <Message todos={todos} deleteMessage={deleteMessage} />
     </>
   );
 };
